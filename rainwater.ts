@@ -27,19 +27,18 @@ export function trapRainWater(heights: number[]): number {
   let right = heights.length - 1;
   let total = 0;
   let waterLevel = 0;
-  console.log({ left, right, total, waterLevel });
+
   while (left < right) {
     let lowerSide;
     if (heights[left] <= heights[right]) {
-      left += 1;
       lowerSide = heights[left];
+      left += 1;
     } else {
-      right -= 1;
       lowerSide = heights[right];
+      right -= 1;
     }
     waterLevel = Math.max(waterLevel, lowerSide);
     total += waterLevel - lowerSide;
-    console.log({ left, right, total, waterLevel, lowerSide });
   }
 
   return total;

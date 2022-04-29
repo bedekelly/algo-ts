@@ -31,7 +31,7 @@ Deno.test("No rainwater in backwards stairs", () => {
 });
 
 Deno.test("One trapped rainwater in U shape", () => {
-  assertEquals(1, trapRainWater([1, 0, 1]));
+  assertEquals(trapRainWater([1, 0, 1]), 1);
 });
 
 Deno.test("Trapped rainwater in raised U shape", () => {
